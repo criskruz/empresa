@@ -1,10 +1,18 @@
 import { Sequelize, DataTypes } from "sequelize";
 
 
-const sequelize = new Sequelize("mybs", "usuario", "usuarioroot", {
-  host: "localhost",
-  dialect: "mysql",
-  port: 3005,
+// const sequelize = new Sequelize("mybs", "usuario", "usuarioroot", {
+//   host: "localhost",
+//   dialect: "mysql",
+//   port: 3005,
+// });
+
+const sequelize = new Sequelize({
+  dialect: 'mysql',
+  host: 'localhost',
+  username: 'usuario',
+  password: 'usuarioroot',
+  database: 'mybs',
 });
 
 const Usuario = sequelize.define(

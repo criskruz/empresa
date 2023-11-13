@@ -25,3 +25,12 @@ app.use('/api/usuarios/', routerUsuario)
 app.listen(port, ()=>{
     console.log(`Servidor escuchando en el puerto ${port}`)
 })
+
+
+
+// Cerrar el servidor correctamente al finalizar la aplicación
+process.on('SIGTERM', () => {
+  server.close(() => {
+    console.log('Servidor cerrado correctamente');
+  });
+});

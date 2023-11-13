@@ -4,7 +4,7 @@ import { Sequelize, DataTypes } from "sequelize";
 const sequelize = new Sequelize("mybs", "usuario", "usuarioroot", {
   host: "localhost",
   dialect: "mysql",
-  port: 3306,
+  port: 3005,
 });
 
 const Usuario = sequelize.define(

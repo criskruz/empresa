@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes } from "sequelize";
 
 
-const sequelize = new Sequelize("mybs", "root", "", {
+const sequelize = new Sequelize("mybs", "usuario", "usuarioroot", {
   host: "localhost",
   dialect: "mysql",
   port: 3306,
